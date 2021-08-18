@@ -1,0 +1,10 @@
+﻿1>------ Build started: Project: CSL_Ventas.Win, Configuration: Release Any CPU ------
+1>D:\Create Sofl Lopez\Proyectos de la empresa\Sistemas\Ventas\Etapas\Mejoras realizadas luego de terminado\CSL_Ventas\CSL_Ventas.Win\Operaciones\FormFacturacion.cs(66,13,66,21): warning CS0169: The field 'FormFacturacion.articulo' is never used
+1>D:\Create Sofl Lopez\Proyectos de la empresa\Sistemas\Ventas\Etapas\Mejoras realizadas luego de terminado\CSL_Ventas\CSL_Ventas.Win\Operaciones\FormConduce.cs(42,25,42,37): warning CS0169: The field 'FormConduce._itemalmacen' is never used
+1>D:\Create Sofl Lopez\Proyectos de la empresa\Sistemas\Ventas\Etapas\Mejoras realizadas luego de terminado\CSL_Ventas\CSL_Ventas.Win\Herramientas\FormClientesFactura.cs(38,13,38,15): warning CS0169: The field 'FormClientesFactura.id' is never used
+1>  CSL_Ventas.Win -> D:\Create Sofl Lopez\Proyectos de la empresa\Sistemas\Ventas\Etapas\Mejoras realizadas luego de terminado\CSL_Ventas\CSL_Ventas.Win\bin\Release\CSL_Ventas.Win.exe
+2>------ Skipped Build: Project: CSL_VentasSetup, Configuration: Release ------
+2>Project not selected to build for this solution configuration 
+3>------ Skipped Build: Project: CSL_Ventas32bit, Configuration: Release ------
+3>Project not selected to build for this solution configuration 
+========== Build: 1 succeeded, 0 failed, 3 up-to-date, 2 skipped ==========
