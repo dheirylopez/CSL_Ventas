@@ -21,11 +21,14 @@ namespace Servicios
         void DeleteRol(Roles entity);
         IEnumerable<Roles> GetNombreId(string nombre);
         IEnumerable<Empleados> GetNombreIdEmpleado(string nombre);
+        IEnumerable<Sucursal> GetSucursalesCompania(int nombre);
+        IEnumerable<UsuarioCompania> GetUsuarioCompania(int nombre);
     }
     public class SeguridadServices : ISeguridadServices
     {
         readonly iSeguridadRepository _seguridadRepository = new SeguridadRepository(Conexion.GetDbConnectionSQL());
         readonly iUsuarioRepository _usuarioRepository = new UsuarioRepository(Conexion.GetDbConnectionSQL());
+        readonly ISucursalRepository _sucursalRepository = new SucursalRepository(Conexion.GetDbConnectionSQL());
         public void Add(IEnumerable<Empleados> entities)
         {
             throw new NotImplementedException();
@@ -66,7 +69,10 @@ namespace Servicios
         {
             return _seguridadRepository.Get();
         }
-
+        public IEnumerable<Sucursal> GetSucursalesCompania(int nombre)
+        {
+            return _sucursalRepository.Getidcompania(nombre);
+        }
         public Empleados Get(KeyValuePair<string, string> value)
         {
             throw new NotImplementedException();
@@ -150,6 +156,16 @@ namespace Servicios
 
             }
             return varlor;
+        }
+
+        public IEnumerable<Compania> GetUsuarioCompania(int nombre)
+        {
+            throw new NotImplementedException();
+        }
+
+        IEnumerable<UsuarioCompania> ISeguridadServices.GetUsuarioCompania(int nombre)
+        {
+            throw new NotImplementedException();
         }
     }
 }

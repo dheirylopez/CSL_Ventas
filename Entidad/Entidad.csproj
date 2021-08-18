@@ -69,6 +69,8 @@
     <Compile Include="Roles.cs" />
     <Compile Include="RolesAreas.cs" />
     <Compile Include="Usuario.cs" />
+    <Compile Include="UsuarioCompania.cs" />
+    <Compile Include="UsuarioSucursal.cs" />
     <Compile Include="VistaConduce.cs" />
     <Compile Include="VistaCotizacion.cs" />
     <Compile Include="VistaFactua.cs" />

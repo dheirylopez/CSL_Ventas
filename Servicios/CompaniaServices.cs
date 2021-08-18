@@ -12,6 +12,7 @@ namespace Servicios
     {
         IEnumerable<Compania> GetNombreId(string nombre);
         Compania GetNombreId(int nombre);
+        IEnumerable<Sucursal> Getidcompania(int nombre);
     }
 
 
@@ -91,6 +92,11 @@ namespace Servicios
         public Compania GetNombreId(int nombre)
         {
             return _companiaRepository.GetNombreId(nombre);
+        }
+
+        public IEnumerable<Sucursal> Getidcompania(int nombre)
+        {
+            throw new NotImplementedException();
         }
     }
 }

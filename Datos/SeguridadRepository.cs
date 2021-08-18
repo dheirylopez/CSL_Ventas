@@ -106,7 +106,13 @@ namespace Datos
             if (DbConnection.State == System.Data.ConnectionState.Closed) DbConnection.Open();
             return DbConnection.Query<Empleados>(query.ToString(), commandTimeout: CommandTimeout);
         }
+        public IEnumerable<UsuarioCompania> GetCompaniaUsuario(string nombre)
+        {
+            var query = new StringBuilder(string.Format("select * from UsuarioCompania where idusuario like '%{0}%'", nombre));
 
+            if (DbConnection.State == System.Data.ConnectionState.Closed) DbConnection.Open();
+            return DbConnection.Query<UsuarioCompania>(query.ToString(), commandTimeout: CommandTimeout);
+        }
         public IEnumerable<Empleados> GetEmpleado()
         {
             var query = new StringBuilder(string.Format("select * from Empleado "));
@@ -122,6 +128,7 @@ namespace Datos
         Usuario GetUsuaario(int id);
         void Add(Usuario item);
         void Update(Usuario item);
+        IEnumerable<UsuarioCompania> GetUsuarioCompania(int nombre);
     }
 
     public class UsuarioRepository : RepositoryBase<Usuario>, iUsuarioRepository
@@ -152,6 +159,14 @@ namespace Datos
             query.AppendFormat(" Where idEmpleado = {0}", id);
             return DbConnection.Query<Usuario>(query.ToString(), commandTimeout: CommandTimeout).FirstOrDefault();
 
+        }
+
+        public IEnumerable<UsuarioCompania> GetUsuarioCompania(int nombre)
+        {
+            var query = new StringBuilder(string.Format("select * from UsuarioCompania where idusuario like '%{0}%'  order by Nombre asc", nombre));
+
+            if (DbConnection.State == System.Data.ConnectionState.Closed) DbConnection.Open();
+            return DbConnection.Query<UsuarioCompania>(query.ToString(), commandTimeout: CommandTimeout);
         }
     }
 }

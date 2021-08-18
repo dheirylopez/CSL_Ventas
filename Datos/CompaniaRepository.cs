@@ -14,8 +14,10 @@ namespace Datos
         void AddCompania(Compania item);
         void UpdateCompania(Compania item);
        void DeleteCompania(Compania item);
+      
         IEnumerable<Compania> GetNombreId(string nombre);
         Compania GetNombreId(int nombre);
+        
     }
     public class CompaniaRepository : RepositoryBase<Compania>, ICompaniaRepository
     {

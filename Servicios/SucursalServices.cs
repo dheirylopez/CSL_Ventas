@@ -15,6 +15,7 @@ namespace Servicios
         IEnumerable<Compania> Get(string nombre);
      IEnumerable<Compania> GetCompania();
         Compania Get(int nombre);
+
     }
 
 

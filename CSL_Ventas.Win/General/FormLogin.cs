@@ -29,10 +29,10 @@ namespace CSL_Ventas.Win
 
         private void button3_Click(object sender, EventArgs e)
         {
-          
+
             FormAgUsuario agu = new FormAgUsuario();
             agu.ShowDialog();
-          
+
 
         }
 
@@ -69,8 +69,8 @@ namespace CSL_Ventas.Win
                 //menu.usuario = usuario;
                 menu.Show();
 
-              
-         
+
+
                 FormLogin login = new FormLogin();
                 login.Close();
 
@@ -100,6 +100,41 @@ namespace CSL_Ventas.Win
         private void label3_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void comboBoxEmpleado_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (Convert.ToInt32(comboBoxEmpleado.SelectedValue) <= 0)
+            {
+
+            }
+            else
+            {
+                var iduser = Convert.ToInt32(comboBoxEmpleado.SelectedValue);
+                var compania = _presentar.GetUsuarioCompania(iduser);
+
+                comboBoxCompañia.DataSource = compania;
+                comboBoxCompañia.DisplayMember = "Nombre";
+                comboBoxCompañia.ValueMember = "Id";
+            }
+
+        }
+
+        private void comboBoxCompañia_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (Convert.ToInt32(comboBoxCompañia.SelectedValue) <= 0)
+            {
+
+            }
+            else
+            {
+                var iduser = Convert.ToInt32(comboBoxCompañia.SelectedValue);
+                var sucursales = _presentar.GetSucursalesCompania(iduser);
+
+                comboBoxCompañia.DataSource = sucursales;
+                comboBoxCompañia.DisplayMember = "Nombre";
+                comboBoxCompañia.ValueMember = "Id";
+            }
         }
     }
 }
