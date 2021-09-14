@@ -740,6 +740,8 @@ namespace CSL_Ventas.Win.Operaciones
             Cierre.empleado = empleado;
             Cierre.ShowDialog();
         }
+
+     
     }
 }
 

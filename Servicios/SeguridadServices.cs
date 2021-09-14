@@ -71,7 +71,7 @@ namespace Servicios
         }
         public IEnumerable<Sucursal> GetSucursalesCompania(int nombre)
         {
-            return _sucursalRepository.Getidcompania(nombre);
+            return _sucursalRepository.GetSucursalCompania(nombre);
         }
         public Empleados Get(KeyValuePair<string, string> value)
         {
@@ -158,14 +158,11 @@ namespace Servicios
             return varlor;
         }
 
-        public IEnumerable<Compania> GetUsuarioCompania(int nombre)
+        public IEnumerable<UsuarioCompania> GetUsuarioCompania(int nombre)
         {
-            throw new NotImplementedException();
+            return _usuarioRepository.GetUsuarioCompania(nombre);
         }
 
-        IEnumerable<UsuarioCompania> ISeguridadServices.GetUsuarioCompania(int nombre)
-        {
-            throw new NotImplementedException();
-        }
+       
     }
 }

@@ -1,33 +1,33 @@
 ﻿namespace CSL_Ventas.Win
 {
     partial class FormLogin
-{
-    /// <summary>
-    /// Required designer variable.
-    /// </summary>
-    private System.ComponentModel.IContainer components = null;
-
-    /// <summary>
-    /// Clean up any resources being used.
-    /// </summary>
-    /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
-    protected override void Dispose(bool disposing)
     {
-        if (disposing && (components != null))
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
         {
-            components.Dispose();
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
         }
-        base.Dispose(disposing);
-    }
 
-    #region Windows Form Designer generated code
+        #region Windows Form Designer generated code
 
-    /// <summary>
-    /// Required method for Designer support - do not modify
-    /// the contents of this method with the code editor.
-    /// </summary>
-    private void InitializeComponent()
-    {
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
@@ -76,7 +76,7 @@
             this.label3.Size = new System.Drawing.Size(28, 18);
             this.label3.TabIndex = 12;
             this.label3.Text = "ojo";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
+      
             // 
             // buttonClose
             // 
@@ -169,7 +169,7 @@
             this.comboBoxEmpleado.Name = "comboBoxEmpleado";
             this.comboBoxEmpleado.Size = new System.Drawing.Size(160, 27);
             this.comboBoxEmpleado.TabIndex = 5;
-            this.comboBoxEmpleado.SelectedIndexChanged += new System.EventHandler(this.comboBoxEmpleado_SelectedIndexChanged);
+            this.comboBoxEmpleado.SelectedValueChanged += new System.EventHandler(this.comboBoxEmpleado_SelectedIndexChanged);
             // 
             // textBoxClave
             // 
@@ -208,7 +208,7 @@
             this.toolTip1.SetToolTip(this.buttonEntrar, "Ingresar");
             this.buttonEntrar.UseVisualStyleBackColor = true;
             this.buttonEntrar.Click += new System.EventHandler(this.buttonEntrar_Click);
-            this.buttonEntrar.Enter += new System.EventHandler(this.buttonEntrar_Enter);
+ 
             // 
             // pictureBox1
             // 
@@ -252,6 +252,7 @@
             this.comboBoxSucursal.Name = "comboBoxSucursal";
             this.comboBoxSucursal.Size = new System.Drawing.Size(160, 27);
             this.comboBoxSucursal.TabIndex = 12;
+
             // 
             // label7
             // 
@@ -296,25 +297,25 @@
             this.ResumeLayout(false);
             this.PerformLayout();
 
-    }
+        }
 
-    #endregion
+        #endregion
 
-    private System.Windows.Forms.Panel panel1;
-    private System.Windows.Forms.Label label1;
-    private System.Windows.Forms.PictureBox pictureBox1;
-    private System.Windows.Forms.Panel panel2;
-    private System.Windows.Forms.Label label2;
-    private System.Windows.Forms.Label label4;
-    private System.Windows.Forms.Label label5;
-    private System.Windows.Forms.ComboBox comboBoxEmpleado;
-    private System.Windows.Forms.TextBox textBoxClave;
-    private System.Windows.Forms.Button buttonEntrar;
-    private System.Windows.Forms.Button buttonCancelar;
-    private System.Windows.Forms.Button button4;
-    private System.Windows.Forms.ToolTip toolTip1;
-    private System.Windows.Forms.Button buttonClose;
-    private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.ComboBox comboBoxEmpleado;
+        private System.Windows.Forms.TextBox textBoxClave;
+        private System.Windows.Forms.Button buttonEntrar;
+        private System.Windows.Forms.Button buttonCancelar;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.Button buttonClose;
+        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox comboBoxCompañia;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox comboBoxSucursal;

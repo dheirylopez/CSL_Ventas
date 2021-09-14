@@ -19,7 +19,7 @@ namespace Datos
         IEnumerable<Compania> Get(string nombre);
         IEnumerable<Compania> GetCompania();
         Compania Get(int nombre);
-        IEnumerable<Sucursal> Getidcompania(int nombre);
+        IEnumerable<Sucursal> GetSucursalCompania(int nombre);
     }
     public class SucursalRepository : RepositoryBase<Sucursal>, ISucursalRepository
     {
@@ -56,7 +56,7 @@ namespace Datos
             if (DbConnection.State == System.Data.ConnectionState.Closed) DbConnection.Open();
             return DbConnection.Query<Sucursal>(query.ToString(), commandTimeout: CommandTimeout);
         }
-        public IEnumerable<Sucursal> Getidcompania(int nombre)
+        public IEnumerable<Sucursal> GetSucursalCompania(int nombre)
         {
             var query = new StringBuilder(string.Format("select * from Sucursal where idcompania like '%{0}%'  order by Nombre asc", nombre));
 
