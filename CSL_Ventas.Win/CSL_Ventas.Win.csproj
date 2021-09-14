@@ -287,12 +287,6 @@
     <Compile Include="General\FormLogin.Designer.cs">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="General\FormMenuOjo.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="General\FormMenuOjo.Designer.cs">
-      <DependentUpon>FormMenuOjo.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Seguridad\FormEmpleados.cs">
@@ -331,9 +325,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="General\FormMenu.resx">
       <DependentUpon>FormMenu.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="General\FormMenuOjo.resx">
-      <DependentUpon>FormMenuOjo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Mantenimiento\FormClientesFactura.resx">
       <DependentUpon>FormClientesFactura.cs</DependentUpon>

@@ -208,6 +208,7 @@
             this.toolTip1.SetToolTip(this.buttonEntrar, "Ingresar");
             this.buttonEntrar.UseVisualStyleBackColor = true;
             this.buttonEntrar.Click += new System.EventHandler(this.buttonEntrar_Click);
+            this.buttonEntrar.Enter += new System.EventHandler(this.buttonEntrar_Enter);
             // 
             // pictureBox1
             // 

@@ -136,5 +136,36 @@ namespace CSL_Ventas.Win
                 comboBoxCompañia.ValueMember = "Id";
             }
         }
+
+        private void buttonEntrar_Enter(object sender, EventArgs e)
+        {
+            var id = Convert.ToInt32(comboBoxEmpleado.SelectedValue);
+            var validar = _presentar.Validar(id, textBoxClave.Text);
+            if (validar == true)
+            {
+                //var empleado = _presentar.GetEmpleado(id);
+                //var usuario = _presentar.GetUsuaario(id);
+
+
+
+                this.Hide();
+
+                FormMenu menu = new FormMenu();
+                //menu.empleado = empleado;
+                //menu.usuario = usuario;
+                menu.Show();
+
+
+
+                FormLogin login = new FormLogin();
+                login.Close();
+
+
+            }
+            else
+            {
+                MessageBox.Show("La clave es incorrecta o este empleado no tiene acceso al sistema.");
+            }
+        }
     }
 }
